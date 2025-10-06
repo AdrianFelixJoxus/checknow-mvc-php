@@ -1,0 +1,1 @@
+<div class="auth__logo"></div>

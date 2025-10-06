@@ -1,0 +1,44 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+@use "sass:color";
+.alerta {
+
+    padding: 1.5rem 1.5rem 1.5rem 3rem;
+    text-transform: uppercase;
+    margin: 1rem 0;
+    font-size: 1.2rem;
+    font-weight: v.$bold;
+
+    &__error {
+        background-color: color.adjust(v.$rojo, $lightness:63%);
+        border-left: .5rem solid v.$rojo;
+        color: v.$rojo;
+    }
+
+    &__exito {
+        background-color: color.adjust(v.$verde, $lightness:40%);
+        border-left: .5rem solid v.$verde;
+        color: color.adjust(v.$verde, $blackness:20%);
+    }
+}
+
+.alertas {
+    display: block;
+    text-align: center;
+    @include m.tablet {
+        display: flex;
+        justify-content: center;
+    }
+    &__mensaje {
+        color: v.$blanco;
+        padding: .5rem;
+        border-radius: .5rem;
+    }
+    &__mensaje--error {
+        background-color: v.$rojo;
+        
+    }
+    &__mensaje--exito {
+        background-color: color.adjust(v.$verde, $blackness:15%);
+    } 
+}

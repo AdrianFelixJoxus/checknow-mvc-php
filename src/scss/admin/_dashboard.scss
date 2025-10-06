@@ -1,0 +1,116 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+@use "sass:color";
+
+.dashboard {
+    height: 100%;
+    background-color: v.$gris-claro;
+
+    &__contenedor {
+        background-color: v.$blanco;
+        padding: 2rem;
+        border-radius: 1rem;
+
+        &--registros {
+            @include m.contenedor;
+        }
+    }
+
+    &__contenedor-boton {
+        @include m.tablet {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            align-items: center;
+
+            &--registros {
+                @include m.contenedor;
+                margin-bottom: 2rem
+            }
+        }
+    }
+    &__boton {
+        @include m.boton(v.$azul, v.$blanco);
+        text-transform: uppercase;
+        font-size: 1.4rem;
+        border-radius: .5rem;
+        text-align: center;
+        &:nth-child(1) {
+            margin-bottom: 1rem;
+        }
+        @include m.tablet {
+            &:nth-child(1) {
+                margin-bottom: 0;
+            }
+        }
+
+        &--naranja {
+            @extend .dashboard__boton;
+            background-color: color.adjust(v.$naranja, $blackness: 10%);
+            font-size: 1.4rem;
+            &:hover {
+                background-color: color.adjust(v.$naranja, $blackness: 30%);
+            }
+        }
+
+        &--fecha-registro {
+            all: unset;
+            padding: 1.2rem 1.5rem;
+            margin-top: 1rem;
+            display: flex;
+            justify-self: center;
+            justify-content: center;
+            background-color: v.$azul;
+            border-radius: .5rem;
+            color: v.$blanco;
+            width: 100%;
+            
+            @include m.tablet {
+                margin: 0;
+            }
+            &:hover {
+                cursor: pointer;
+            }
+
+            &[type="date"]::-webkit-calendar-picker-indicator {
+                background-color: v.$blanco;
+                border-radius: .5rem;
+                
+            }
+        }
+
+
+        @include m.tablet {
+            width: auto;
+            margin: 0;
+        }
+
+    }
+
+    &__heading {
+        margin: 3rem 0 3rem 0;
+
+    }
+
+}
+
+.dashboard-botones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+
+
+    &__boton {
+        @include m.boton(v.$azul, v.$blanco);
+        text-transform: uppercase;
+        font-size: 1.4rem;
+        border-radius: .5rem;
+        @include m.tablet {
+            width: 30rem;
+            height: 10rem;
+            align-items: center;
+        }
+    }
+}
+

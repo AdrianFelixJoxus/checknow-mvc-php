@@ -1,0 +1,22 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.auth {
+    @include m.contenedor-sm;
+
+    &__heading {
+        margin-top: 2rem;
+    }
+    &__texto {
+        text-align: center;
+    }
+    &__logo {
+        min-height: 15rem;
+        background-image: url("../img/gorro-de-cocinero.png"),
+        image-set(url("../img/gorro-de-cocinero.avif") 1x, url("../img/gorro-de-cocinero.webp") 1x, url("../img/gorro-de-cocinero.png") 1x );
+        background-repeat: no-repeat;
+        background-size: 100px, 100px, cover, cover;
+        background-position: center;
+        
+    }
+}

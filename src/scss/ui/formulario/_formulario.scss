@@ -1,0 +1,43 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+@use "sass:color";
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+
+    &__campo {
+        display: flex;
+        flex-direction: column;
+        margin: 1.5rem 0;
+    }
+    &__label {
+        display: block;
+        font-size: 1.8rem;
+        color: rgba(v.$negro, .8);
+    }
+    &__input {
+        padding: 1rem;
+        border: 1px solid color.adjust(v.$gris, $lightness:20%);
+        border-radius: .5rem;
+        background-color: color.adjust(v.$gris-claro, $blackness:8%);
+        
+        &::placeholder {
+            font-size: 1.2rem;
+            font-weight: v.$bold;
+            color: color.adjust(v.$negro, $lightness: 20%);
+        }
+        &:hover {
+            background-color: color.adjust(v.$gris-claro, $blackness:15%);
+        }
+    }
+    &__submit {
+        @include m.boton(v.$azul, v.$blanco);
+        margin-top: 1rem;
+        @include m.tablet {
+            width: auto;
+            align-self: flex-start;
+        }
+    }
+    
+}

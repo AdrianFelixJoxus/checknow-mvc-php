@@ -1,0 +1,56 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+@use "sass:color";
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    @include m.contenedor;
+
+    &__thead {
+        background-color: v.$gris-oscuro;
+        color: v.$blanco;
+    }
+    &__th {
+        padding: 1rem;
+        text-align: left;
+        text-align: center;
+    }
+    &__tr {
+        text-align: center;
+        &:nth-child(even) {
+            background-color: color.adjust(v.$gris-claro, $blackness:5%);
+        }
+    }
+    &__td {
+        padding: 1.5rem 1rem;
+
+        &--acciones {
+            @extend .table__td;
+            display: flex;
+            justify-content: flex-start;
+            align-items:center;
+            gap: 2rem;
+
+        }
+
+    }
+    &__accion {
+        all: unset;
+        text-transform: uppercase;
+        font-size: 1.4rem;
+        font-weight: v.$bold;
+        cursor: pointer;
+        &--editar {
+            color: v.$azul;
+        }
+        &--eliminar {
+            color: v.$rojo;
+        }
+    }
+
+    &__table-registros {
+        display: flex;
+        flex-direction: column;
+    }
+}
