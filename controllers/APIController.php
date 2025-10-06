@@ -93,11 +93,18 @@ class APIController {
             }
             // Validar que halla sido registrado el desayuno
             $desayuno = Desayuno::whereArray(["asistenciaId" => $asistenciaUsuario[0]->id]);
+            
             if(!$desayuno) {
                 echo json_encode(["resultado" => false]);
                 return;
             }
 
+            // validar que no halla sido registrado el desayuno entrada
+            if($desayuno[0]->horaEntrada !== "") {
+                echo json_encode(["resultado" => false]);
+                return;
+            }
+            
             
             $desayuno[0]->horaEntrada = $_POST["horaEntrada"];
             $resultado = $desayuno[0]->guardar();
