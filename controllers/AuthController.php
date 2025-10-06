@@ -58,7 +58,7 @@ class AuthController {
     public static function logout() {
         session_start();
         $_SESSION = [];
-        header('Location: /login');
+        header('Location: /');
     }
 
     public static function registro(Router $router) {
