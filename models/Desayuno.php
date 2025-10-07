@@ -16,7 +16,7 @@ class Desayuno extends ActiveRecord {
         $this->id = $args['id'] ?? null;
         $this->horaSalida = $args['horaSalida'] ?? '';
         $this->asistenciaId = $args['asistenciaId'] ?? '';
-        $this->horaEntrada = $args['horaEntrada'] ?? '';
+        $this->horaEntrada = $args['horaEntrada'] ?? '00:00:00';
         
     }
 }

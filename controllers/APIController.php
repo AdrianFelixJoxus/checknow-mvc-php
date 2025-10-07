@@ -73,7 +73,6 @@ class APIController {
 
             $desayuno = new Desayuno;
             $_POST["asistenciaId"] = $asistenciaUsuario[0]->id;
-            $_POST["horaEntrada"] = "";
             $desayuno->sincronizar($_POST);
             $resultado = $desayuno->guardar();
             if($resultado) {
