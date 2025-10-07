@@ -279,7 +279,7 @@
         const fecha = new Date();
         const fechaYear = fecha.getFullYear();
         const FechaMes = fecha.getMonth() + 1;
-        const fechaDay = fecha.getDate() + 1;
+        const fechaDay = fecha.getDate();
         const fechaFormato = `${fechaYear}-${FechaMes}-${fechaDay}`;
 
         return fechaFormato;

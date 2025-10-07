@@ -100,7 +100,7 @@ class APIController {
             }
 
             // validar que no halla sido registrado el desayuno entrada
-            if($desayuno[0]->horaEntrada !== "") {
+            if($desayuno[0]->horaEntrada !== "00:00:00") {
                 echo json_encode(["resultado" => false]);
                 return;
             }
