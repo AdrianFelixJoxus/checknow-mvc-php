@@ -42,6 +42,11 @@ class APIController {
     public static function desayuno() { 
 
         if($_SERVER["REQUEST_METHOD"] === "POST") {
+            ini_set('display_errors', 1);
+            ini_set('display_startup_errors', 1);
+            error_reporting(E_ALL);
+
+            
             if(!is_auth()) {
                 echo json_encode([]);
                 return;
@@ -51,16 +56,20 @@ class APIController {
 
             // validar que exista una entrada en el dia
             $asistenciaUsuario = Asistencia::whereArray(["fecha" => $_POST["fecha"], "usuarioId" => $usuarioId]);
-            if(!$asistenciaUsuario) {
+            if(!$asistenciaUsuario || $asistenciaUsuario = "") {
                 echo json_encode(["resultado" => false]);
                 return;
             }
             // Validar que no halla sido registrado el desayuno
             $desayuno = Desayuno::whereArray(["asistenciaId" => $asistenciaUsuario[0]->id]);
-            if($desayuno) {
+            if($desayuno || $desayuno !== "") {
                 echo json_encode(["resultado" => false]);
                 return;
             }
+
+            error_log("POST: " . print_r($_POST, true));
+            error_log("Asistencia: " . print_r($asistenciaUsuario, true));
+            error_log("Desayuno: " . print_r($desayuno, true));
 
             $desayuno = new Desayuno;
             $_POST["asistenciaId"] = $asistenciaUsuario[0]->id;
