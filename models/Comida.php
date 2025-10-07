@@ -15,7 +15,7 @@ class Comida extends ActiveRecord {
     public function __construct($args = [])
     {
         $this->id = $args['id'] ?? null;
-        $this->horaEntrada = $args['horaEntrada'] ?? '';
+        $this->horaEntrada = $args['horaEntrada'] ?? '00:00:00';
         $this->asistenciaId = $args['asistenciaId'] ?? '';
         $this->horaSalida = $args['horaSalida'] ?? '';
         $this->desayunoId = $args['desayunoId'] ?? '';

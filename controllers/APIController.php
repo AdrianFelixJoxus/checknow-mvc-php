@@ -157,7 +157,7 @@ class APIController {
             $comida = new Comida;
             $_POST["asistenciaId"] = $asistenciaUsuario[0]->id;
             $_POST["desayunoId"] = $desayuno[0]->id;
-            $_POST["horaEntrada"] = "";
+            $_POST["horaEntrada"] = "00:00:00";
             $comida->sincronizar($_POST);
             $resultado = $comida->guardar();
             if($resultado) {
