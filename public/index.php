@@ -56,7 +56,7 @@ $router->get("/check", [CheckController::class, "index"]);
 // APIs
 $router->get("/api/entrada", [APIController::class, "entrada"]);
 $router->post("/api/entrada", [APIController::class, "entrada"]);
-$router->post("/api/desayuno", [APIController::class, "desayuno"]);
+$router->post("/api/desayunoRegistro", [APIController::class, "desayuno"]);
 $router->post("/api/desayunoEntrada", [APIController::class, "desayunoEntrada"]);
 $router->post("/api/comida", [APIController::class, "comida"]);
 $router->post("/api/comidaEntrada", [APIController::class, "comidaEntrada"]);

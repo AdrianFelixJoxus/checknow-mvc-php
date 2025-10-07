@@ -116,7 +116,7 @@
             datos.append("fecha", fecha);
             datos.append("horaSalida", hora);
 
-            const url = "/api/desayuno";
+            const url = "/api/desayunoRegistro";
             const respuesta = await fetch(url, {
                 method: "post",
                 body: datos
@@ -127,7 +127,7 @@
             if(resultado.resultado) {
                 Swal.fire(
                     "Registro Exitoso",
-                    "Tu Salida Ha sido Registrada",
+                    "Tu Entrada Ha sido Registrada",
                     "success"
                 ).then( () => location.href = "/logout");
             } else {
