@@ -56,13 +56,13 @@ class APIController {
 
             // validar que exista una entrada en el dia
             $asistenciaUsuario = Asistencia::whereArray(["fecha" => $_POST["fecha"], "usuarioId" => $usuarioId]);
-            if(!$asistenciaUsuario || $asistenciaUsuario = "") {
+            if(!$asistenciaUsuario || $asistenciaUsuario === "") {
                 echo json_encode(["resultado" => false]);
                 return;
             }
             // Validar que no halla sido registrado el desayuno
             $desayuno = Desayuno::whereArray(["asistenciaId" => $asistenciaUsuario[0]->id]);
-            if($desayuno || $desayuno !== "") {
+            if($desayuno) {
                 echo json_encode(["resultado" => false]);
                 return;
             }
