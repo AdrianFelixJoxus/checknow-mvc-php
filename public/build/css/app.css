@@ -551,8 +551,22 @@ h3 {
   border-radius: 1rem;
 }
 .dashboard__contenedor--registros {
-  width: min(95%, 120rem);
-  margin: 0 auto;
+  padding: 1rem 0 1rem 0;
+}
+@media (min-width: 768px) {
+  .dashboard__contenedor--registros {
+    width: min(95%, 120rem);
+    margin: 0 auto;
+    padding: 2rem;
+  }
+}
+.dashboard__contenedor--check {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  align-items: center;
+  margin-bottom: 1rem;
 }
 @media (min-width: 768px) {
   .dashboard__contenedor-boton {
@@ -615,7 +629,7 @@ h3 {
   background-color: #007df4;
   border-radius: 0.5rem;
   color: #FFFFFF;
-  width: 100%;
+  width: 92%;
 }
 @media (min-width: 768px) {
   .dashboard__boton--fecha-registro {
@@ -669,7 +683,7 @@ h3 {
 }
 @media (min-width: 768px) {
   .dashboard-botones__boton {
-    width: 30rem;
+    width: 20rem;
     height: 10rem;
     align-items: center;
   }
@@ -684,6 +698,12 @@ h3 {
 .table__thead {
   background-color: #1E293B;
   color: #FFFFFF;
+  font-size: 1rem;
+}
+@media (min-width: 768px) {
+  .table__thead {
+    font-size: 1.8rem;
+  }
 }
 .table__th {
   padding: 1rem;
@@ -698,6 +718,12 @@ h3 {
 }
 .table__td, .table__td--acciones {
   padding: 1.5rem 1rem;
+  font-size: 1rem;
+}
+@media (min-width: 768px) {
+  .table__td, .table__td--acciones {
+    font-size: 1.8rem;
+  }
 }
 .table__td--acciones {
   display: flex;

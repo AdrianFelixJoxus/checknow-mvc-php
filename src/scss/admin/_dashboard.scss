@@ -12,7 +12,21 @@
         border-radius: 1rem;
 
         &--registros {
-            @include m.contenedor;
+            padding: 1rem 0 1rem 0;
+            
+            @include m.tablet {
+                @include m.contenedor;
+                padding: 2rem;
+            }
+        }
+
+        &--check {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            width: 100%;
+            align-items: center;
+            margin-bottom: 1rem;
         }
     }
 
@@ -63,7 +77,7 @@
             background-color: v.$azul;
             border-radius: .5rem;
             color: v.$blanco;
-            width: 100%;
+            width: 92%;
             
             @include m.tablet {
                 margin: 0;
@@ -107,9 +121,10 @@
         font-size: 1.4rem;
         border-radius: .5rem;
         @include m.tablet {
-            width: 30rem;
+            width: 20rem;
             height: 10rem;
             align-items: center;
+            
         }
     }
 }

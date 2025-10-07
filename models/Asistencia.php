@@ -17,6 +17,7 @@ class Asistencia extends ActiveRecord {
     public $salida;
     public $asistencia;
     public $diferiencia;
+    public $desayuno;
 
     public function __construct($args = [])
     {

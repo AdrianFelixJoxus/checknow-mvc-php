@@ -9,14 +9,15 @@
 </div>
 
 <div class="dashboard__contenedor dashboard__contenedor--registros">
-    <div class="dashboard__contenedor">
+    
         <table class="table">
             <thead class="table__thead table__thead--registros">
                 <tr>
                     <th scope="col" class="table__th">Nombre</th>
                     <th scope="col" class="table__th">Asistencia Hora</th>
-                    <th scope="col" class="table__th">Comidas | hora Salida y Hora Entrada</th>
+                    <th scope="col" class="table__th">Desayuno | hora Salida y Hora Entrada</th>
                     <!-- <th scope="col" class="table__th">Diferiencia</th> -->
+                    <th scope="col" class="table__th">Comida | hora Salida y Hora Entrada</th>
                     <th scope="col" class="table__th">Jornada Terminada Hora</th>
                 </tr>
             </thead>
@@ -25,7 +26,7 @@
             </tbody>
             
         </table>
-    </div>
+    
 </div>
 
 

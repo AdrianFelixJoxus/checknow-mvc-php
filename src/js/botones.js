@@ -16,6 +16,9 @@
     console.log(dashboardBotones);
     if(dashboardBotones) {
 
+        // const contenedorDiv = document.createElement("DIV");
+        // contenedorDiv.classList.add("dashboard__contenedor","dashboard__contenedor--check");
+
         botonEntrada.textContent = "Entrada";
         botonEntrada.classList.add("dashboard-botones__boton");
         botonEntrada.id = 1;
@@ -23,6 +26,10 @@
         botonDesayuno.textContent = "Desayuno";
         botonDesayuno.classList.add("dashboard-botones__boton");
         botonDesayuno.id = 5;
+
+        // contenedorDiv.appendChild(botonEntrada);
+        // contenedorDiv.appendChild(botonDesayuno);
+       
 
         botonEntradaDesayuno.textContent = "Entrada Desayuno";
         botonEntradaDesayuno.classList.add("dashboard-botones__boton");
@@ -42,6 +49,7 @@
 
         dashboardBotones.appendChild(botonEntrada);
         dashboardBotones.appendChild(botonDesayuno);
+        //dashboardBotones.appendChild(contenedorDiv);
         dashboardBotones.appendChild(botonEntradaDesayuno);
         dashboardBotones.appendChild(botonComida);
         dashboardBotones.appendChild(botonEntradaComida);

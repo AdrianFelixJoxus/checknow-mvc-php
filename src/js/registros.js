@@ -63,6 +63,17 @@
                         tdHora.textContent = "Hora de asistencia No registrada";
                         tr.appendChild(tdHora);
                     }
+
+                    const tdDesayuno = document.createElement("TD");
+                    tdDesayuno.classList.add("table__td");
+                    if(usuario.desayuno) {
+                        const {horaSalida, horaEntrada} = usuario.desayuno;
+                        tdDesayuno.textContent = `${horaSalida} - ${horaEntrada}`;
+                        tr.appendChild(tdDesayuno);
+                    } else {
+                        tdDesayuno.textContent = `No registrada`;
+                        tr.appendChild(tdDesayuno);
+                    }
                     
 
                     const tdComida = document.createElement("TD");
@@ -75,6 +86,8 @@
                         tdComida.textContent = `No registrada`;
                         tr.appendChild(tdComida);
                     }
+
+        
 
                     // const tdDiferiencia = document.createElement("TD");
                     // tdDiferiencia.classList.add("table__td");

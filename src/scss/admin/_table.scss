@@ -7,9 +7,14 @@
     border-collapse: collapse;
     @include m.contenedor;
 
+    
     &__thead {
         background-color: v.$gris-oscuro;
         color: v.$blanco;
+        font-size: 1rem;
+        @include m.tablet {
+            font-size: 1.8rem;
+        }
     }
     &__th {
         padding: 1rem;
@@ -24,6 +29,10 @@
     }
     &__td {
         padding: 1.5rem 1rem;
+        font-size: 1rem;
+        @include m.tablet {
+            font-size: 1.8rem;
+        }
 
         &--acciones {
             @extend .table__td;

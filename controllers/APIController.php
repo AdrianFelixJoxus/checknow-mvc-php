@@ -279,6 +279,7 @@ class APIController {
             $asistencia->usuario = Usuario::find($asistencia->usuarioId);
             $asistencia->comida = Comida::where("asistenciaId", $asistencia->id);
             $asistencia->salida = Salida::where("asistenciaId", $asistencia->id);
+            $asistencia->desayuno = Desayuno::where("asistenciaId", $asistencia->id);
             $usuariosArray["usuarios"][] = $asistencia;
             
         }
