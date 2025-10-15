@@ -47,7 +47,6 @@
     &__accion {
         all: unset;
         text-transform: uppercase;
-        font-size: 1.2rem;
         font-weight: v.$bold;
         cursor: pointer;
         &--editar {
@@ -55,9 +54,6 @@
         }
         &--eliminar {
             color: v.$rojo;
-        }
-        @include m.tablet {
-            font-size: 1.4rem;
         }
         
     }
