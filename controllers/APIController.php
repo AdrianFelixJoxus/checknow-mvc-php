@@ -67,9 +67,10 @@ class APIController {
                 return;
             }
 
-            error_log("POST: " . print_r($_POST, true));
-            error_log("Asistencia: " . print_r($asistenciaUsuario, true));
-            error_log("Desayuno: " . print_r($desayuno, true));
+            // verificar errores o depurar
+            // error_log("POST: " . print_r($_POST, true));
+            // error_log("Asistencia: " . print_r($asistenciaUsuario, true));
+            // error_log("Desayuno: " . print_r($desayuno, true));
 
             $desayuno = new Desayuno;
             $_POST["asistenciaId"] = $asistenciaUsuario[0]->id;

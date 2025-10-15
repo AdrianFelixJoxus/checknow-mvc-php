@@ -165,6 +165,8 @@ class UsuarioController {
             if(!isset($usuario)) {
                 header("Location: /admin/dashboard");
             }
+            // error_log("POST: " . print_r($_POST, true));
+            // error_log("Usuario: " . print_r($usuario, true));
 
             $resultado = $usuario->eliminar();
             if($resultado) {
