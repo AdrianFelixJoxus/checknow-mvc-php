@@ -738,16 +738,16 @@ h3 {
   font-weight: 700;
   cursor: pointer;
 }
-@media (min-width: 768px) {
-  .table__accion {
-    font-size: 1.4rem;
-  }
-}
 .table__accion--editar {
   color: #007df4;
 }
 .table__accion--eliminar {
   color: rgb(169, 0, 0);
+}
+@media (min-width: 768px) {
+  .table__accion {
+    font-size: 1.4rem;
+  }
 }
 .table__table-registros {
   display: flex;

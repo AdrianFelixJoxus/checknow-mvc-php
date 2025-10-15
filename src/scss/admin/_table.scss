@@ -50,14 +50,14 @@
         font-size: 1.2rem;
         font-weight: v.$bold;
         cursor: pointer;
-        @include m.tablet {
-            font-size: 1.4rem;
-        }
         &--editar {
             color: v.$azul;
         }
         &--eliminar {
             color: v.$rojo;
+        }
+        @include m.tablet {
+            font-size: 1.4rem;
         }
         
     }
