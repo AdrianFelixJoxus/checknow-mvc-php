@@ -155,6 +155,11 @@ class UsuarioController {
             return;
         }
             $id = $_POST["id"];
+            $id = filter_var($id, FILTER_VALIDATE_INT);
+            if(!$id) {
+                header("Location: /login");
+                return;
+            }
             $usuario = Usuario::find($id);
 
             if(!isset($usuario)) {
