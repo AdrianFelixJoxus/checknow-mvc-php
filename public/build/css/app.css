@@ -734,7 +734,6 @@ h3 {
 .table__accion {
   all: unset;
   text-transform: uppercase;
-  font-size: 1.2rem;
   font-weight: 700;
   cursor: pointer;
 }
@@ -743,11 +742,6 @@ h3 {
 }
 .table__accion--eliminar {
   color: rgb(169, 0, 0);
-}
-@media (min-width: 768px) {
-  .table__accion {
-    font-size: 1.4rem;
-  }
 }
 .table__table-registros {
   display: flex;
